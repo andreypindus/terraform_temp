@@ -34,3 +34,7 @@ variable "private_subnet_names" {
     description = "Name of the subnet"
     default = []
 }
+
+variable "internet_gateway_name" {
+    description = "Name of the internet gateway"
+}

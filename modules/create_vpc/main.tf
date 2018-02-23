@@ -28,3 +28,12 @@ resource "aws_subnet" "new_private_subnet" {
     Name = "${var.private_subnet_names[count.index]}"
   }
 }
+
+resource "aws_internet_gateway" "vpc_internet_gateway" {
+  count = "${length(var.public_subnets) > 0 ? 1 : 0}"
+  vpc_id = "${aws_vpc.new_vpc.id}"
+
+  tags {
+    Name = "${var.internet_gateway_name}"
+  }
+}
