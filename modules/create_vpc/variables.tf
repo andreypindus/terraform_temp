@@ -10,8 +10,14 @@ variable "vpc_name" {
     description = "A name of the VPC"
 }
 
-variable "cidr_block_subnet" {
-    description = "Cidr block of the subnet"
+variable "public_subnets" {
+    description = "Cidr block of the public subnet"
+    default = []
+}
+
+variable "private_subnets" {
+    description = "Cidr block of the private subnet"
+    default = []
 }
 
 variable "map_public_ip_on_launch" {
@@ -19,6 +25,12 @@ variable "map_public_ip_on_launch" {
     default = true
 }
 
-variable "subnet_name" {
+variable "public_subnet_names" {
     description = "Name of the subnet"
+    default = []
+}
+
+variable "private_subnet_names" {
+    description = "Name of the subnet"
+    default = []
 }

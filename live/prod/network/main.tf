@@ -7,7 +7,10 @@ module "create_vpc" {
     cidr_block = "172.16.0.0/16"
     vpc_name = "test_vpc"
     enable_dns_hostnames = true
-    
-    cidr_block_subnet = "172.16.3.0/20"
-    subnet_name = "public_subnet"
+
+    public_subnets = []
+    public_subnet_names = []
+
+    private_subnets = ["172.16.3.0/20", "172.16.5.0/20"]
+    private_subnet_names = ["private1", "private2"]
 }
