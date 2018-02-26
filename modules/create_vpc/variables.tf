@@ -38,3 +38,11 @@ variable "private_subnet_names" {
 variable "internet_gateway_name" {
     description = "Name of the internet gateway"
 }
+
+variable "enable_s3_endpoint" {
+    description = "Enable creation of an S3 endpoint"
+}
+
+variable "enable_dynamodb_endpoint" {
+    description = "Enable creation of a dynamoDB endpoint"
+}

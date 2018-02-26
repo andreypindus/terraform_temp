@@ -18,4 +18,10 @@ module "create_vpc" {
 
     # Create internet Gateway (Only if at least one public subnet is created)
     internet_gateway_name = "default_VPC_gateway"
+
+    # Create an endpoint for S3 service
+    enable_s3_endpoint = true
+
+    # Create an endpoint for DynamoDB
+    enable_dynamodb_endpoint = true
 }
